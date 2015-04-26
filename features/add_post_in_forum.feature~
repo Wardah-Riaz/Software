@@ -1,0 +1,97 @@
+1-
+As A : Logged in User (Faculty or Student)
+I Want To: Participate in a discussion topic in course forum
+So That: My point of view or problem is heard
+Success Criteria
+ A new reply is added to the thread.
+ User must be currently logged in to the system.
+ Any one visiting the forum thread should be able to see this post
+
+Feature: User can add a ppost in the discussion forum
+
+Scenario: Add a post
+Given I am logged in as a User or Faculty member
+And I am on the Discussion Forum Page
+When I follow "Add new post"
+Then I should be on the Create New Post page
+When I fill in "Post" with "Hello"
+And I press "Save Changes"
+Then I should be on the Discussion Forum page
+And I should see "Hello"
+
+2-
+As a Faculty member I should be able to add a topic related to a lecture taught.
+Success Criteria
+ A new thread is created in the course forum.
+ Faculty member must specify the topic of discussion.
+ Only registered and currently login users can view and access the forum topic.
+Additional Criteria
+ If the faculty member responsible for multiple courses, he must specify the course for this forum topic.
+
+Feature: Faculty member can add a topic
+
+Scenario: Add a topic
+Given I am on my Course page
+When I follow "Add new topic"
+Then I should be on the Create New Topic page
+When I fill in "Title" with "Algebra"
+And I press "Save Changes"
+Then I should be on my Course page
+And I should see "Algebra"
+
+3-
+The main feature of the site is to add course/manage courses.
+
+Feature: Instructor can create a new course
+
+Scenerio: Add a course
+Given I am looged as an instructor
+And I am on Course Management System Homepage
+When I press "Add a new Course"
+Then I should be on the Create new course page
+When I fill title with "Probability"
+And I press "Create"
+Then I should be on on Course Management System Homepage
+And I should see Probability
+
+
+4-
+Ability for user to login in to the system
+
+5-
+Success Criteria
+ Username should be unique
+ User email address must be unique
+ Password should be confirmed by having the user re-enter it
+ Password must be at least 8 characters long
+ Username & password should not contain escape characters
+
+Given that I signup as an instructor or a student
+And I am on the signup page
+Then I should be able to provide a valid and unique username
+And I should be able to provide a valid and unique email address
+And I should be able to provide a password thats atleast 8 characters long
+And password should not contain any escape characters
+And I should provide my password again for confirmation
+And I press signup 
+Then I should be directed to the login page
+
+6-
+Success Criteria
+ Username should be unique
+ User email address must be unique
+ Password should be confirmed by having the user re- enter it
+ Password must be at least 8 characters long
+
+
+
+
+3: given im a instructor When i open my course homapge i should be able to post new video lectures
+3: given im a instructor, When a request for a student comes to be admitted in the course i should be able to accept/decline the permission
+3: given im a student When i visit the website, i should be able to see all the courses presently running and i should be able to enroll in them
+given im  a student/faculty i should be able to post/answer questions on veos
+*videos
+the above students are those that wish to follow on the class videos/lectures. much like the piazza.
+Given im a student, i should be also be able to enroll in courses that are closed Then i should be able to enroll in those courses for free without any instructor approval.
+given that im a student And i wish to enroll in a live course Then i should be enrolled subject to instructor approval
+4: Given that im a student i should be able to Sign up on the website thorugh google or facebook because i dont have time to fill out all my details.
